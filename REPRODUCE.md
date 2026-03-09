@@ -126,7 +126,8 @@ Vibe Coding            94% ± 2%         4% ± 1%
 Hybrid (AIBRA Peak)    98% ± 1%         0%
 ```
 
-### **Result 3: SAC Hallucination Detection (Figure 4)**
+### **Result 3: SAC Hallucination Detection (Section 4.1, Figure 4)**
+**Protocol**: Uses 850 logical inconsistencies (30% Syntactic, 70% Semantic context mashups).
 **Command**:
 ```bash
 python benchmarks/sac_validation.py --dataset benchmarks/multi_omics_conflict/
@@ -143,7 +144,7 @@ SAC Performance (127 test cases):
 - Mean L_C (Valid Reports):  0.32 ± 0.18
 ```
 
-### **Result 4: Gen 23 Case Study (§6.6)**
+### **Result 4: Case Study - Pathogen Detection in Gen 23 (§5.1)**
 **Command**:
 ```bash
 python benchmarks/ajtert_case_study/reproduce_gen23.py

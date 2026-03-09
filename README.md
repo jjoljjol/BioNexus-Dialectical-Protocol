@@ -16,11 +16,11 @@ Official implementation of the **Dialectical Protocol** for autonomous AI evolut
 
 ## 🎯 **Key Features**
 
-- 🧬 **Bio-Inspired Evolution**: DNA proofreading + Immune system metaphors.
-- 🤖 **Self-Evolving AI**: 42% accuracy improvement over 50 generations (62% → 92.8%).
-- 🛡️ **Hallucination Detection**: SAC algorithm with 94% detection rate.
-- 💾 **Digital Thymus**: Persistent immune memory (100% self-correction).
-- ⚡ **Intel Arc Optimized**: Native support for Intel Arc GPUs + NPU.
+- 🧬 **Bio-Inspired Evolution**: Adaptive Immunology (Self/Non-self) + Genomic Proofreading.
+- 🤖 **Self-Evolving AI**: 42.4% accuracy improvement over 50 generations (62% → 94%).
+- 🛡️ **Hallucination Detection**: SAC algorithm with 94% detection rate in benchmarked pathogens.
+- 💾 **Digital Thymus**: Persistent immune memory (Case Study: AjTERT-Fibonacci).
+- ⚡ **Intel Arc Optimized**: Native support for Intel Arc GPUs + oneAPI.
 
 ---
 
@@ -79,10 +79,10 @@ Generation 50: 92.8% accuracy (final)
 
 | Metric | Value | Improvement | Paper Section |
 | :--- | :--- | :--- | :--- |
-| **Accuracy Gain** | **92.8%** | +42% (vs 62.0%) | §6 Results |
-| **Vibe Coding Success** | **94%** | +26% (vs 68% trad) | §6.3 |
-| **SAC Detection Rate** | **94%** | 120/127 cases | §6.6 |
-| **Thymus Integrity** | **98.2%** | Knowledge retention | §7.3 |
+| **Accuracy Gain** | **94.0%** | +26.0% (vs 68% trad) | §4.3 Results |
+| **Vibe Coding Success** | **94%** | +26% (vs 68% trad) | §3.2 |
+| **SAC Detection Rate** | **94%** | 120/127 cases | §5.1 Case Study |
+| **Thymus Integrity** | **98.2%** | Knowledge retention | §5.0 |
 | **Self-Correction Rate** | **100%** | (Gen 24-50) | Appendix E |
 
 ---

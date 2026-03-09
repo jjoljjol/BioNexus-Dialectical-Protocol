@@ -6,20 +6,24 @@ The **BioNexus-Dialectical-Protocol** is designed as a modular, decentralized AI
 
 1.  **Dialectical Protocol Engine (`core/dialectical_protocol/`)**
     - Manages a multi-agent committee (Synthesis, Criticism, Refinement).
-    - Implements stochastic crossover and Bayesian weighted selection.
-2.  **Source-Anchored Consensus (SAC) (`core/sac_algorithm/`)**
-    - A logic layer that cross-references AI-generated claims with trusted genomic/proteomic sources.
+    - Implements **Algorithm 1 (Dialectical Immunity)** for macro-level validation.
+2.  **Genetic Proofreading Layer (`core/proofreader/`)**
+    - Implements **Algorithm 2 (Genetic Proofreading)** for micro-level repair.
+    - Ensures syntax and type-check fidelity before adversarial audit.
+3.  **Source-Anchored Consensus (SAC) (`core/sac_algorithm/`)**
+    - A logic layer that cross-references AI-generated claims with trusted sources.
     - Calculates *Consensus Loss (L_C)* to detect hallucinations.
-3.  **Digital Thymus (`core/digital_thymus/`)**
-    - A persistent immune memory that stores "negative knowledge" (known hallucinations) and "positive tokens" (verified facts).
-    - Prevents recurrent hallucinations across generations.
+4.  **Digital Thymus (`core/digital_thymus/`)**
+    - A persistent immune memory that stores "negative knowledge" (logical pathogens).
+    - Prevents recurrent hallucinations using the SAC results.
 
 ## 🧬 Evolutionary Workflow
 
 ```mermaid
 graph TD
-    A[Gen n Baseline] --> B[Multi-Agent Synthesis]
-    B --> C[SAC Hallucination Check]
+    A[Gen n Baseline] --> AA[Algorithm 2: Genetic Proofreading]
+    AA --> B[Multi-Agent Synthesis]
+    B --> C[Algorithm 1: SAC Hallucination Check]
     C -- "L_C > 0.7 (Hallucination)" --> D[Thymus Registration]
     D --> B
     C -- "L_C <= 0.3 (Validated)" --> E[Bayesian Selection]
@@ -31,14 +35,16 @@ graph TD
     end
 ```
 
-## 📐 Mathematical Grounding (SAC Algorithm)
-The **Consensus Loss ($L_C$)** is defined as the divergence between the generated claim ($C$) and the grounded source artifacts ($S$):
+## 📐 Vibe Coding Formalization
+Vibe Coding is a mapping $\phi: \mathcal{V} \times \mathcal{M} \rightarrow \mathcal{C}$ where $\mathcal{V}$ is semantic intent, $\mathcal{M}$ is biological metaphor, and $\mathcal{C}$ is executable code space.
 
+Example:
+- **Vibe**: "T-Cell (Audit): identify discordant genotypes"
+- **Code**: `def audit(df): return df[df['geno'] != df['pheno']]`
+
+## 📐 Mathematical Grounding (SAC Algorithm)
+The **Consensus Loss ($L_C$)** is defined as:
 $$L_C = \alpha \cdot \mathcal{D}_{KL}(C || S) + \beta \cdot H(\text{Context})$$
 
-Where:
-- $\alpha, \beta$: Weighting coefficients for source divergence and context entropy.
-- $H(\text{Context})$: Measures the uncertainty of the agent's internal state.
-
 ## 💾 Digital Thymus: Persistent Immune Memory
-The Thymus acts as an immutable ledger of "Negative Knowledge". Once an entity pair (e.g., `AjTERT` ↔ `Fibonacci_Seeding`) is registered as a logical pathogen, the Dialectical Engine automatically prunes any future synthesis paths containing this invalid co-occurrence.
+The Thymus acts as an immutable ledger of **Pathogenic Co-occurrences** (e.g., `AjTERT` ↔ `Fibonacci_Seeding`).

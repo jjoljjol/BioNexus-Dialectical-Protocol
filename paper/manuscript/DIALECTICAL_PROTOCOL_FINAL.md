@@ -44,12 +44,26 @@ def dialectical_step(code_t, test_suite, performance_t):
 ## 📊 III. Results & Discussion
 During Generation 23, the system generated a hallucinated report merging *AjTERT* genomics with cattle scaling parameters. This incident catalyzed the **Source-Anchored Consensus (SAC) Algorithm**. By implementing a "DNA Mismatch Repair" mechanism matching entity co-occurrences against a 127-entry ground-truth corpus, SAC identified the hallucination with 94% accuracy.
 
-![Fig 2: Evolution Trajectory](file:///d:/1_DaNAgreen/AI_Evo_Research/BioNexus-Dialectical-Protocol/paper/manuscript/figures/Figure%2_Evolution%20Trajectory.png)
+![Fig 2: Evolution Trajectory](file:///d:/1_DaNAgreen/AI_Evo_Research/BioNexus-Dialectical-Protocol/paper/manuscript/figures/Figure%202_Evolution%20Trajectory.png)
 *Figure 2: Generational evolution showing the rise in systemic fidelity after the introduction of SAC.*
+
+![Fig 3: Vibe vs. Prompting](file:///d:/1_DaNAgreen/AI_Evo_Research/BioNexus-Dialectical-Protocol/paper/manuscript/figures/Figure%203_Vibe%20vs.%20Prompting.png)
+*Figure 3: Comparative analysis of Vibe Coding vs. Direct Prompting accuracy over 250 generations.*
+
+![Fig 4: SAC Performance](file:///d:/1_DaNAgreen/AI_Evo_Research/BioNexus-Dialectical-Protocol/paper/manuscript/figures/Figure%204_SAC%20Performance.png)
+*Figure 4: Detailed performance of the Source-Anchored Consensus (SAC) algorithm in detecting cross-project hallucinations.*
 
 ---
 
-## 🧬 IV. Conclusion
+## 🧬 IV. Digital Thymus & Future Work
+While the Dialectical Protocol ensures generational safety, we propose the **Digital Thymus** for persistent immune memory.
+
+![Fig 5: Digital Thymus Dashboard](file:///d:/1_DaNAgreen/AI_Evo_Research/BioNexus-Dialectical-Protocol/paper/manuscript/figures/Figure%205_Digital%20Thymus%20Dashboard.png)
+*Figure 5: The Digital Thymus Monitoring Dashboard. Demonstrates the deterministic filtering of historically identified logical pathogens.*
+
+---
+
+## 🏁 V. Conclusion
 The Dialectical Protocol provides a foundation for safe, self-correcting AI. By utilizing Vibe Coding to bridge biological metaphors and executable code, we have shown that AI can autonomously heal its own logical pathogens. This biological fidelity is not just a metaphor, but a functional requirement for the next generation of autonomous scientific agents.
 
 ---

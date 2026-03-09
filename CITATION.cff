@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "BioNexus-Dialectical-Protocol"
+authors:
+  - family-names: "Your Last Name"
+    given-names: "Your First Name"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Co-Author Last"
+    given-names: "Co-Author First"
+version: 1.0.0
+date-released: 2026-03-09
+repository-code: "https://github.com/yourusername/BioNexus-Dialectical-Protocol"
+license: MIT
+preferred-citation:
+  type: article
+  title: "The Dialectical Protocol: Self-Evolving AI via Bio-Inspired Vibe Coding and Adversarial Agent Synthesis"
+  authors:
+    - family-names: "Your Last Name"
+      given-names: "Your First Name"
+  journal: "IEEE Transactions on Neural Networks and Learning Systems"
+  year: 2026
+  status: submitted

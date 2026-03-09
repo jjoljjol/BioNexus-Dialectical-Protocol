@@ -1,0 +1,24 @@
+\subsection{Dataset: Multi-Omics Conflict Benchmark}
+The protocol was evaluated on a synthetic but high-fidelity dataset comprising:
+\begin{itemize}
+    \item \textbf{Proteomics}: 5,200 protein expression samples.
+    \item \textbf{Genomics}: 12,400 SNP variants.
+    \item \textbf{Conflicts}: 850 logical inconsistencies (e.g., conflicting P-values across datasets) designed to trigger hallucinations.
+\end{itemize}
+
+\subsection{Baseline Methods (Extended)}
+To rigorously evaluate the Dialectical Protocol, we compared it against several architectural baselines:
+\begin{enumerate}
+    \item \textbf{Genetic Programming (DEAP)}: Standard tree-based GA with subtree crossover (Pop: 50, Gen: 50).
+    \item \textbf{RL-based Optimization (PPO)}: Reward assigned for compilation success and accuracy gain on test suites.
+    \item \textbf{Constitutional AI (Fixed)}: Recursive self-improvement governed by static principles (e.g., ``Optimize speed'').
+    \item \textbf{LangChain Multi-Agent (Static)}: Fixed-role agents without the ability to mutate their own logic.
+\end{enumerate}
+
+\subsection{Hardware and Digital Twin Environment}
+The experimentation was conducted on an \textbf{Intel Arc A770 (XPU)} cluster (4 units) utilizing \textbf{oneAPI} acceleration, 128GB RAM, and Docker-based sandbox isolation.
+
+\subsection{Computational Complexity Analysis}
+\textbf{Algorithm 1 (Dialectical Protocol):} The total complexity per generation is $O(n \cdot d + k^2 + k \cdot m)$, where $n$ is lines of code, $d$ is AST depth, $k$ is mutation count, and $m$ is LLM latency. For a 500-line codebase, the average turnaround time is $\sim$45 seconds.
+
+\textbf{Algorithm 2 (Genetic Proofreading):} Complexity is $O(n + g \cdot m)$, where $g$ is the number of gaps detected. This ensures linear scaling with code size during the enzymatic repair phase.

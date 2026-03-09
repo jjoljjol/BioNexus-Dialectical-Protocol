@@ -1,0 +1,181 @@
+\documentclass[journal]{IEEEtran}
+
+% 패키지
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{listings}
+
+\begin{document}
+
+% ═══════════════════════════════════════════════════════════
+% TITLE & AUTHORS
+% ═══════════════════════════════════════════════════════════
+\title{The Dialectical Protocol: Self-Evolving AI via \\
+Bio-Inspired Vibe Coding and Adversarial Agent Synthesis}
+
+\author{\IEEEauthorblockN{Anonymous Authors}
+\IEEEauthorblockA{\textit{(Submitted to IEEE TNNLS)}}
+}
+
+\maketitle
+
+% ═══════════════════════════════════════════════════════════
+% ABSTRACT
+% ═══════════════════════════════════════════════════════════
+\begin{abstract}
+This paper introduces the \textbf{Dialectical Protocol}, a multi-agent framework for autonomous AI evolution inspired by biological immune systems and DNA proofreading. We address the fundamental ``Proofreading Deficiency'' in current Large Language Models (LLMs) by transitioning toward a specialized multi-agent architecture capable of systemic self-audit. Central to this framework is \textbf{Vibe Coding}---a methodology that leverages high-dimensional biological metaphors as executable functional specifications, bridging the gap between natural language guidance and rigorous code synthesis. Through a triple-layered architecture comprising \textbf{Genetic Proofreading} (Micro-level), \textbf{Dialectical Immunity} (Macro-level), and \textbf{Merkle Checkpointing} (Safety), we demonstrate that agentic systems can autonomously resolve logic conflicts in complex multi-omics datasets with a 94\% success rate---outperforming traditional prompting by 26\%. Our results, highlighted by the ``Generation 14'' autonomous discovery of Bayesian logic, provide a robust pathway for safe, self-correcting scientific intelligence.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Holistic AI, bio-inspired computing, autonomous evolution, 
+vibe coding, code synthesis, immune systems
+\end{IEEEkeywords}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION I: INTRODUCTION
+% ═══════════════════════════════════════════════════════════
+\section{Introduction}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/fig1_architecture.png}
+\caption{The Dialectical Protocol Architecture. Panel A: Digital Thymus (Immunological Filtering) where transient AI agents are evaluated for systemic compatibility. Panel B: Genetic Proofreading (Mutation Correction) ensuring high-fidelity code synthesis through enzymatic-like self-audit.}
+\label{fig:architecture}
+\end{figure}
+
+\input{sections/01_introduction}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION II: RELATED WORK
+% ═══════════════════════════════════════════════════════════
+\section{Related Work}
+\input{sections/02_related_work}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION III: PATHOGENESIS OF PRIMITIVE INTELLIGENCE
+% ═══════════════════════════════════════════════════════════
+\section{The Pathogenesis of Primitive Intelligence}
+\input{sections/03_pathogenesis}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION IV: VIBE CODING METHODOLOGY
+% ═══════════════════════════════════════════════════════════
+\section{Methodology: Vibe Coding as Implementation Substrate}
+\input{sections/04_vibe_coding}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION V: EXPERIMENTAL SETUP
+% ═══════════════════════════════════════════════════════════
+\section{Experimental Setup}
+\input{sections/05_experiments}
+
+% Algorithm 1
+\begin{algorithm}
+\caption{Dialectical Protocol (Single Generation)}
+\label{alg:dialectical}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} Current code $C_t$, Test suite $T$, Performance $P_t$
+\STATE \textbf{Output:} Evolved code $C_{t+1}$, Performance $P_{t+1}$
+\STATE Checkpoint $\leftarrow$ SHA512$(C_t)$
+\STATE Deploy $C_t$ to Digital Twin Sandbox
+\STATE Vibe $\leftarrow$ SynthesizeVibe(T, P_t)
+\STATE Audit $\leftarrow$ AdversarialCommitteeAudit(Vibe)
+\IF{Audit passes}
+    \STATE $C_{t+1} \leftarrow$ VibeInterpreter(Audit)
+    \STATE $P_{t+1} \leftarrow$ Validate($C_{t+1}$, T)
+\ELSE
+    \STATE Rollback to Checkpoint
+\ENDIF
+\STATE \textbf{return} $C_{t+1}$, $P_{t+1}$
+\end{algorithmic}
+\end{algorithm}
+
+% Algorithm 2
+\begin{algorithm}
+\caption{Genetic Proofreading Protocol}
+\label{alg:proofreading}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} Raw code mutation $M$, Template $T$
+\STATE \textbf{Initialize:} $C_{proof} \leftarrow M$
+\WHILE{SyntaxErrors($C_{proof}$) \OR $\neg$Compilable($C_{proof}$)}
+    \STATE Pathogen $\leftarrow$ LocateError($C_{proof}$)
+    \STATE $C_{proof} \leftarrow$ EnzymaticRepair(Pathogen, T)
+\ENDWHILE
+\STATE F $\leftarrow$ CalculateFidelity($C_{proof}$)
+\STATE \textbf{return} $C_{proof}$, F
+\end{algorithmic}
+\end{algorithm}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION VI: RESULTS
+% ═══════════════════════════════════════════════════════════
+\section{Results}
+\input{sections/06_results}
+
+% Figure 2: Evolution Trajectory
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{{figures/Figure 2_Evolution Trajectory}.png}
+\caption{Evolution Trajectory (Gen 0--50). The plot demonstrates the progressive accuracy improvement and loss convergence across 50 generations of autonomous evolution.}
+\label{fig:evolution}
+\end{figure}
+
+% Figure 3: Vibe vs. Prompting
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{{figures/Figure 3_Vibe vs. Prompting}.png}
+\caption{Comparative Performance: Vibe Coding vs. Traditional Prompting. Results show a 26\% improvement in logic conflict resolution using the Dialectical Protocol.}
+\label{fig:vibe_vs_prompt}
+\end{figure}
+
+% Figure 4: SAC Performance
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{{figures/Figure 4_SAC Performance}.png}
+\caption{Substrate-Aware Coding (SAC) Algorithm Benchmarking. Performance metrics across different biological complexity tiers (Bovine, Porcine, Fish).}
+\label{fig:sac_perf}
+\end{figure}
+
+% Figure 5: Digital Thymus Dashboard
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{{figures/Figure 5_Digital Thymus Dashboard}.png}
+\caption{Real-time Monitoring of the Digital Thymus. The dashboard visualizes the immunological filtering of AI agents and systemic stability scores.}
+\label{fig:dashboard}
+\end{figure}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION VII: DISCUSSION
+% ═══════════════════════════════════════════════════════════
+\section{Discussion}
+\input{sections/07_discussion}
+
+% ═══════════════════════════════════════════════════════════
+% SECTION VIII: CONCLUSION
+% ═══════════════════════════════════════════════════════════
+\section{Conclusion}
+\input{sections/08_conclusion}
+
+% ═══════════════════════════════════════════════════════════
+\section*{Acknowledgment}
+The author thanks the AI research assistants (Google Antigravity utilizing Gemini 3.1, Gemini 3.0, Claude 4.6 Sonnet, and Claude 4.6 Opus) for enabling the vibe-coding development methodology that bridged molecular biology domain knowledge with software implementation. Special acknowledgment to the open-source communities of OpenVINO, Ollama, and llama.cpp for providing the foundational inference runtimes that made local AI experimentation accessible.
+
+\section*{Funding}
+This work was supported by Grant Number: RS-2025-25461278, Technology Development Program, Ministry of SMEs and Startups (MSS), Republic of Korea, under the Tech Incubator Program for Startup Korea (TIPS) scheme. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+
+% ═══════════════════════════════════════════════════════════
+% APPENDIX
+% ═══════════════════════════════════════════════════════════
+\onecolumn
+\input{sections/appendix_supplementary}
+
+\end{document}

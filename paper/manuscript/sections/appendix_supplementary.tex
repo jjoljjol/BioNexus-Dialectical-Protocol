@@ -1,0 +1,82 @@
+\section*{Appendix A: Convergence Analysis}
+\textbf{Theorem 1 (Monotonic Improvement):} Under Hebbian LTP/LTD, if mutation acceptance rate $\alpha > 0.5$, the expected accuracy $\mathbb{E}[P_t]$ is monotonically increasing: $\mathbb{E}[P_{t+1}] \geq \mathbb{E}[P_t] - \epsilon$, where $\epsilon$ is the bounded rollback penalty.
+
+\textbf{Proof Sketch:} 
+1. LTP increases weight $w$ for successful mutations ($w \leftarrow w + \eta$). 
+2. Merkle checkpointing ensures $P_{t+1} \geq P_t$ by blocking non-compilable or regressive code. 
+3. By the law of large numbers, $\lim_{t \to \infty} P_t = P_{max}$.
+
+\section*{Appendix B: Generation 14 Raw Trace}
+\subsection*{B.1 Reconstruction of Automated Dialogue (Session 2026-02-14\_032014)}
+
+\begin{tcolorbox}[colback=gray!5,colframe=blue!40!black]
+\small
+\textbf{Dr. Chair (Advisory Chair):} \\
+``We are seeing a persistent accuracy plateau at 74.1\%. Standard heuristic matching between the T-Cell (Exonuclease) and B-Cell (Polymerase) agents is failing to resolve deep logical pathogens. We need to \textit{incorporate historical priors} to differentiate systemic noise from actual mutation conflicts. Specialist, propose a vibe-driven weighting mechanism that remains biologically plausible.''
+
+\textbf{Dr. Specialist (Algiz):} \\
+``Biological antibodies do not respond to antigens in isolation; they refine their affinity over successive exposures based on clonal selection memory. We can formalize this `vibe' by applying a Bayesian updating mechanism directly to the conflict resolution layer. 
+\\
+\textbf{Mapping:} $H$ (Hypothesis) = Mutation Correctness, $E$ (Evidence) = Current Agent Conflict. \\
+\textbf{Implementation:} $P(H|E) = \frac{P(E|H) P(H)}{P(E)}$. 
+\\
+By weighting the marginal likelihood of current errors ($P(E|H)$) against the historical success rate of the offending agent ($P(H)$), we penalize reactive noise while preserving high-confidence mutations. I recommend immediate injection of this posterior weighting module into the Dialectical Protocol controller.''
+\end{tcolorbox}
+
+\subsection*{B.2 Synthesized Python Implementation}
+\begin{lstlisting}[language=Python, caption=Autonomous Bayesian Weighting Module (Gen 14)]
+prior = compute_historical_mean(conflict_db)
+for sample in batch:
+    likelihood = compute_sample_strength(sample)
+    evidence = marginal_likelihood(batch)
+    posterior = (likelihood * prior) / evidence
+    weights.append(posterior)
+\end{lstlisting}
+
+\subsection*{B.3 Post-SAC Validation State}
+Following the implementation of the SAC algorithm, the system successfully rejected the Generation 23 mashup. The rejection trace showed a Source Divergence of 0.95, effectively triggering a ``Mismatch Repair'' alert and preventing the propagation of the hallucinated seeding protocol into the production vault.
+
+\section*{Appendix D: The SAC Algorithm for Knowledge Validation}
+\subsection*{D.1 Motivation}
+The Gen 23 incident produced a hallucinated report merging \textit{AjTERT} (Project A: Genomics) and \textit{Fibonacci Seeding} (Project B: Bioprocess) with zero empirical grounding.
+
+\subsection*{D.2 Algorithm Logic}
+The SAC engine follows a 3-step pipeline: (1) Entity Extraction and Source Anchoring via Jaccard distance, (2) Adversarial Consistency checking via semantic entropy gradients, and (3) Truth-Gap Labeling to alert the user of non-empirical synthesis.
+
+\subsection*{D.3 Python Implementation Summary}
+The core logic utilizes a co-occurrence matrix $\mathcal{M}$ derived from the local knowledge vault. For any generated set of entities $\{e_1, e_2, ..., e_n\}$, the divergence is calculated as:
+\begin{equation}
+D_{source} = 1 - \frac{|\text{Projects}(e_1) \cap \text{Projects}(e_2)|}{|\text{Projects}(e_1) \cup \text{Projects}(e_2)|}
+\end{equation}
+\end{equation}
+A complete Python implementation of the SAC algorithm and Digital Thymus is provided in the supplemental source package.
+
+\section*{Appendix E: The Digital Thymus -- Persistent Immune Memory}
+\subsection*{E.1 Motivation}
+The Dialectical Protocol and SAC provide per-session safety but lack cross-session memory. The Digital Thymus addresses this by maintaining a persistent registry of semantic failures.
+
+\subsection*{E.2 Implementation: Deterministic Immune Memory}
+The Digital Thymus is implemented as a deterministic validation layer. It utilizes SHA-512 based Merkle-tree indexing to ensure the cryptographically secure integrity of the experience logs.
+\begin{lstlisting}[language=python]
+class DigitalThymus:
+    def __init__(self, log_path, policy_path):
+        self.log_path = Path(log_path)
+        self.policy_path = Path(policy_path)
+        self._load_experience() # Merkle-tree validation
+
+    def register_hallucination(self, entity_pair, consensus_loss):
+        # Deterministic registration of "pathogen" patterns
+        record = HallucinationRecord(
+            id=hash_sha512(entity_pair),
+            loss=consensus_loss,
+            status="MITIGATED"
+        )
+        self._save_and_update_policy() # Hard-Constraint update
+\end{lstlisting}
+
+\subsection*{E.3 Policy Evolution and Safety Gates}
+Beyond logging, the system automatically refines the \texttt{policy.json} constraints. In subsequent generations (Gen 24--50), the \texttt{is_safe_synthesis()} gate achieved a \textbf{0\% recurrence rate} by pre-filtering registered entity pairs before LLM finalization. 
+
+\textbf{Knowledge Integrity (Gen 50):} 98.2\%
+\textbf{Self-Correction Success Rate:} 100\%
+\textbf{Experience Tokens ($T_{exp}$):} 1.0

@@ -1,29 +1,10 @@
 Traditional code synthesis relies on formal logic or rigid prompt engineering. We introduce \textbf{Vibe Coding}---a methodology where high-dimensional biological metaphors serve as executable functional specifications.
 
-\subsection{Formal Definition of Vibe Coding}
-\textbf{Definition 1 (Vibe Coding):}
-Let $\mathcal{V}$ be a high-dimensional vibe space representing semantic intent, $\mathcal{M}$ a metaphor vocabulary derived from biological functional archetypes, and $\mathcal{C}$ an executable code space. Vibe Coding is defined as a mapping:
-\begin{equation}
-    \phi: \mathcal{V} \times \mathcal{M} \rightarrow \mathcal{C}
-\end{equation}
-realized by a large language model $f_{\theta}$ with parameters $\theta$:
-\begin{equation}
-    \phi(v, m) = f_{\theta}(\text{prompt}(v) \oplus \text{context}(m))
-\end{equation}
-subject to the functional constraint:
-\begin{equation}
-    \forall c \in \mathcal{C}, \; \text{Compile}(c) = \text{True} \land \text{TypeCheck}(c) = \text{True}
-\end{equation}
-The metaphor vocabulary $\mathcal{M}$ includes specialized mappings for agent roles:
-\begin{itemize}
-    \item \textbf{T-Cell (Audit)}: $\{scan, identify, neutralize\}$
-    \item \textbf{B-Cell (Specialization)}: $\{verify, validate, synthesize\}$
-    \item \textbf{Macrophage (Cleanup)}: $\{merge, seal, integrate\}$
-\end{itemize}
-A fundamental constraint is enforced: $\forall c \in \mathcal{C}$, $c$ must satisfy $\text{Compile}(c) = \text{True} \land \text{TypeCheck}(c) = \text{True}$.
+\subsection{Formal Definition}
+Let $\mathcal{V}, \mathcal{M}, \mathcal{C}$ be vibe, metaphor, and code spaces. Vibe Coding maps $\phi: \mathcal{V} \times \mathcal{M} \rightarrow \mathcal{C}$ via LLM $f_{\theta}$: $\phi(v, m) = f_{\theta}(\text{prompt}(v) \oplus \text{context}(m))$, subject to $\text{Compile}(c) = \text{True}$. Agents utilize a metaphor vocabulary $\mathcal{M}$ (T-Cell: Audit, B-Cell: Synthesize) to maintain semantic fidelity.
 
-\subsection{Complexity Analysis of Algorithm 1}
-The time complexity of a single generation in the Dialectical Protocol is dominated by the adversarial audit phase. Let $K$ be the number of agents in the committee and $L$ the average context length. The audit phase scales as $O(K \cdot L^2)$ assuming standard transformer attention mechanisms. However, since the Digital Twin sandbox operates in parallel, the total wall-clock time is $O(L^2 + T_{val})$, where $T_{val}$ is the constant-time test suite execution.
+\subsection{Complexity Analysis}
+The adversarial audit phase scales as $O(K \cdot L^2)$ ($K$ agents, $L$ context). Since the Digital Twin sandbox operates in parallel, wall-clock time is $O(L^2 + T_{val})$, ensuring scalability.
 
 \subsection{Vibe Coding vs. Traditional Prompting}
 Unlike traditional prompt engineering which specifies \textit{how} a computation should proceed, Vibe Coding specifies the \textit{biological objective}, aligning with the recent paradigm of intent-based programming \cite{karpathy2025vibecoding, sorensen2024vibe}. For example, a Vibe input of ``Ligate the Bayesian specialist into the loop'' implies a structural integration that maintains context-identity while requiring Merkle-root (SHA-512) validation for state-integrity. This allows for the autonomous discovery of domain-specific scaling laws \cite{lewis2022scaling} without manual parameter tuning.

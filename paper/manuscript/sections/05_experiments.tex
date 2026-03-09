@@ -6,14 +6,8 @@ The protocol was evaluated on a synthetic but high-fidelity dataset comprising:
     \item \textbf{Conflicts}: 850 logical inconsistencies (e.g., conflicting P-values across datasets) designed to trigger hallucinations.
 \end{itemize}
 
-\subsection{Baseline Methods (Extended)}
-To rigorously evaluate the Dialectical Protocol, we compared it against several architectural baselines:
-\begin{enumerate}
-    \item \textbf{Genetic Programming (DEAP)}: Standard tree-based GA with subtree crossover (Pop: 50, Gen: 50).
-    \item \textbf{RL-based Optimization (PPO)}: Reward assigned for compilation success and accuracy gain on test suites.
-    \item \textbf{Constitutional AI (Fixed)}: Recursive self-improvement governed by static principles (e.g., ``Optimize speed'').
-    \item \textbf{LangChain Multi-Agent (Static)}: Fixed-role agents without the ability to mutate their own logic.
-\end{enumerate}
+\subsection{Baseline Methods}
+We compared the protocol against: (1) Genetic Programming (DEAP); (2) PPO-based RL optimization; (3) Constitutional AI with static principles; and (4) Static multi-agent frameworks (LangChain).
 
 \subsection{Hardware and Digital Twin Environment}
 The experimentation was conducted on an \textbf{Intel Arc A770 (XPU)} cluster (4 units) utilizing \textbf{oneAPI} acceleration, 128GB RAM, and Docker-based sandbox isolation.
